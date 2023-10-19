@@ -51,6 +51,22 @@
                             </div>
                         </div>
 
+                        <script>
+                            const password = document.getElementById("password");
+                    
+                            document.getElementById("togglePassword").addEventListener("click", function() {
+                                if(password.getAttribute("type") == "password"){
+                                    this.classList.remove("bi-eye");
+                                    this.classList.add("bi-eye-slash");
+                                    password.setAttribute("type","text");
+                                }else{
+                                    this.classList.remove("bi-eye-slash");
+                                    this.classList.add("bi-eye");
+                                    password.setAttribute("type", "password");
+                                }
+                            })
+                        </script>
+
                         <div class="text-center">
                             <a href="" class="btn btn-link text-decoration-none" data-bs-toggle="modal" data-bs-target="#modalAviso">¿Necesitas ayuda para ingresar?</a>
                         </div>
@@ -180,6 +196,6 @@
             </div>
         </div>
     </div>
+    
 </body>
-
 </html>
